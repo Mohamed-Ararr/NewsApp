@@ -14,6 +14,9 @@ class NewsApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp.router(
       routerConfig: AppRouter.routes,
+      theme: ThemeData(
+        fontFamily: "Lato",
+      ),
     );
   }
 }
