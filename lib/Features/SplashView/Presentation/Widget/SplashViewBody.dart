@@ -7,7 +7,12 @@ class SplashViewBody extends StatelessWidget {
   Widget build(BuildContext context) {
     return const Scaffold(
       body: Center(
-        child: Text("News App"),
+        child: Text(
+          "News App",
+          style: TextStyle(
+            fontSize: 30,
+          ),
+        ),
       ),
     );
   }
