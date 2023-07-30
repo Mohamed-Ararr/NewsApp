@@ -8,23 +8,25 @@ class ImageModel extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Stack(
-      children: [
-        Image.asset(
-          "assets/image.png",
-        ),
-        Container(
-          padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 4),
-          decoration: BoxDecoration(
-            color: AppColors.blueColor,
-            borderRadius: kBorderRad10,
+    return Center(
+      child: Stack(
+        children: [
+          Image.asset(
+            "assets/image.png",
           ),
-          child: Text(
-            "Category",
-            style: TextStyle(color: AppColors.whiteColor),
+          Container(
+            padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 4),
+            decoration: BoxDecoration(
+              color: AppColors.blueColor,
+              borderRadius: kBorderRad10,
+            ),
+            child: Text(
+              "Category",
+              style: TextStyle(color: AppColors.whiteColor),
+            ),
           ),
-        ),
-      ],
+        ],
+      ),
     );
   }
 }

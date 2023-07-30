@@ -28,6 +28,53 @@ class HomeViewBody extends StatelessWidget {
                   onPressed: () {},
                 ),
                 const CarouselListview(),
+                const SizedBox(height: 15),
+                SectionTitleButton(
+                  title: "Recommendation",
+                  onPressed: () {},
+                ),
+                ListView.builder(
+                  physics: const NeverScrollableScrollPhysics(),
+                  shrinkWrap: true,
+                  itemCount: 10,
+                  itemBuilder: (context, index) {
+                    return Container(
+                      margin: EdgeInsets.only(bottom: 10),
+                      child: Row(
+                        children: [
+                          Expanded(
+                            flex: 3,
+                            child: ClipRRect(
+                              borderRadius: kBorderRad15,
+                              child: Image.asset("assets/image.png"),
+                            ),
+                          ),
+                          const SizedBox(width: 15),
+                          Expanded(
+                            flex: 5,
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: const [
+                                Text(
+                                  "Category",
+                                  style: TextStyle(
+                                    fontSize: 13,
+                                    color: Colors.grey,
+                                  ),
+                                ),
+                                SizedBox(height: 5),
+                                Text(
+                                    "What training do vollyball players need?"),
+                                SizedBox(height: 5),
+                                Text("30 / 07 / 2023"),
+                              ],
+                            ),
+                          ),
+                        ],
+                      ),
+                    );
+                  },
+                ),
               ],
             ),
           ),
