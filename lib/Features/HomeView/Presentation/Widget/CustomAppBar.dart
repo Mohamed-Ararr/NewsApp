@@ -15,14 +15,15 @@ class CustomAppBar extends StatelessWidget {
           "News App",
           style: AppFonts.appTitleBlack20,
         ),
-        Container(
-          padding: const EdgeInsets.all(6),
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(12),
-            color: AppColors.greyColor,
-          ),
-          child: InkWell(
-            onTap: () {},
+        InkWell(
+          onTap: () {},
+          borderRadius: BorderRadius.circular(7),
+          child: Container(
+            padding: const EdgeInsets.all(6),
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(12),
+              color: AppColors.greyColor,
+            ),
             child: Icon(
               Icons.search_rounded,
               color: AppColors.blackColor,
