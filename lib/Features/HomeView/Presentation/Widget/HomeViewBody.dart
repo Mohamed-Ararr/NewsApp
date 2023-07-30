@@ -1,7 +1,10 @@
 import "package:flutter/material.dart";
 import "package:newsapp/Constants.dart";
+import "package:newsapp/Core/AppFonts.dart";
+import "package:newsapp/Features/HomeView/Presentation/Widget/SectionTitleButton.dart";
 
 import "../../../../Core/AppColors.dart";
+import "CustomAppBar.dart";
 
 class HomeViewBody extends StatelessWidget {
   const HomeViewBody({super.key});
@@ -16,32 +19,11 @@ class HomeViewBody extends StatelessWidget {
             child: Column(
               children: [
                 const SizedBox(height: 5),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Text(
-                      "News App",
-                      style: TextStyle(
-                        fontSize: 20,
-                        color: AppColors.blackColor,
-                      ),
-                    ),
-                    Container(
-                      padding: const EdgeInsets.all(6),
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(12),
-                        color: AppColors.greyColor,
-                      ),
-                      child: InkWell(
-                        onTap: () {},
-                        child: Icon(
-                          Icons.search_rounded,
-                          color: AppColors.blackColor,
-                          size: 30,
-                        ),
-                      ),
-                    ),
-                  ],
+                const CustomAppBar(),
+                const SizedBox(height: 15),
+                SectionTitleButton(
+                  title: "Breaking news",
+                  onPressed: () {},
                 ),
               ],
             ),

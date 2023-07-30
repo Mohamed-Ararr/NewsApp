@@ -1,5 +1,6 @@
 import "package:flutter/material.dart";
 import "package:go_router/go_router.dart";
+import "package:newsapp/Core/AppFonts.dart";
 import "package:newsapp/Core/AppRouter.dart";
 
 class SplashViewBody extends StatefulWidget {
@@ -19,13 +20,11 @@ class _SplashViewBodyState extends State<SplashViewBody> {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    return Scaffold(
       body: Center(
         child: Text(
           "News App",
-          style: TextStyle(
-            fontSize: 30,
-          ),
+          style: AppFonts.appTitle30,
         ),
       ),
     );
