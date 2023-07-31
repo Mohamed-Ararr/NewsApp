@@ -5,6 +5,7 @@ import "package:newsapp/Constants.dart";
 import "package:newsapp/Core/AppFonts.dart";
 import "package:newsapp/Core/AppRouter.dart";
 import "package:newsapp/Features/HomeView/Presentation/Widget/CarouselListview.dart";
+import "package:newsapp/Features/HomeView/Presentation/Widget/RecomListview.dart";
 import "package:newsapp/Features/HomeView/Presentation/Widget/SectionTitleButton.dart";
 
 import "../../../../Core/AppColors.dart";
@@ -36,48 +37,7 @@ class HomeViewBody extends StatelessWidget {
                   onPressed: () =>
                       GoRouter.of(context).push(AppRouter.recomView),
                 ),
-                ListView.builder(
-                  physics: const NeverScrollableScrollPhysics(),
-                  shrinkWrap: true,
-                  itemCount: 10,
-                  itemBuilder: (context, index) {
-                    return Container(
-                      margin: EdgeInsets.only(bottom: 10),
-                      child: Row(
-                        children: [
-                          Expanded(
-                            flex: 3,
-                            child: ClipRRect(
-                              borderRadius: kBorderRad15,
-                              child: Image.asset("assets/image.png"),
-                            ),
-                          ),
-                          const SizedBox(width: 15),
-                          Expanded(
-                            flex: 5,
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: const [
-                                Text(
-                                  "Category",
-                                  style: TextStyle(
-                                    fontSize: 13,
-                                    color: Colors.grey,
-                                  ),
-                                ),
-                                SizedBox(height: 5),
-                                Text(
-                                    "What training do vollyball players need?"),
-                                SizedBox(height: 5),
-                                Text("30 / 07 / 2023"),
-                              ],
-                            ),
-                          ),
-                        ],
-                      ),
-                    );
-                  },
-                ),
+                const RecomListview(),
               ],
             ),
           ),
