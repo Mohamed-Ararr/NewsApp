@@ -1,7 +1,9 @@
 import "package:carousel_slider/carousel_slider.dart";
 import "package:flutter/material.dart";
+import "package:go_router/go_router.dart";
 import "package:newsapp/Constants.dart";
 import "package:newsapp/Core/AppFonts.dart";
+import "package:newsapp/Core/AppRouter.dart";
 import "package:newsapp/Features/HomeView/Presentation/Widget/CarouselListview.dart";
 import "package:newsapp/Features/HomeView/Presentation/Widget/SectionTitleButton.dart";
 
@@ -31,7 +33,8 @@ class HomeViewBody extends StatelessWidget {
                 const SizedBox(height: 15),
                 SectionTitleButton(
                   title: "Recommendation",
-                  onPressed: () {},
+                  onPressed: () =>
+                      GoRouter.of(context).push(AppRouter.recomView),
                 ),
                 ListView.builder(
                   physics: const NeverScrollableScrollPhysics(),
