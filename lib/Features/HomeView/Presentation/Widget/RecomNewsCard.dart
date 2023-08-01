@@ -8,7 +8,8 @@ class RecomNewsCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: const EdgeInsets.only(bottom: 10),
+      margin: const EdgeInsets.only(bottom: 15),
+      height: 100,
       child: Row(
         children: [
           Expanded(
@@ -22,6 +23,7 @@ class RecomNewsCard extends StatelessWidget {
           Expanded(
             flex: 5,
             child: Column(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: const [
                 Text(
@@ -32,7 +34,11 @@ class RecomNewsCard extends StatelessWidget {
                   ),
                 ),
                 SizedBox(height: 5),
-                Text("What training do vollyball players need?"),
+                Text(
+                  "What training do vollyball players need? What training do vollyball players need? What training do vollyball players need?",
+                  overflow: TextOverflow.ellipsis,
+                  maxLines: 2,
+                ),
                 SizedBox(height: 5),
                 Text("30 / 07 / 2023"),
               ],
