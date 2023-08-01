@@ -29,7 +29,26 @@ class RecomViewBody extends StatelessWidget {
                   child: ListView.builder(
                     itemCount: 10,
                     scrollDirection: Axis.horizontal,
-                    itemBuilder: (context, index) => Text("hello"),
+                    itemBuilder: (context, index) => Container(
+                      padding: const EdgeInsets.symmetric(horizontal: 8),
+                      margin: const EdgeInsets.only(right: 8),
+                      alignment: Alignment.center,
+                      decoration: BoxDecoration(
+                        borderRadius: kBorderRad10,
+                        color: index == 0
+                            ? AppColors.lightBlueColor
+                            : AppColors.greyColor,
+                      ),
+                      child: Text(
+                        "hello",
+                        style: TextStyle(
+                          fontSize: 13,
+                          color: index == 0
+                              ? AppColors.whiteColor
+                              : Colors.black38,
+                        ),
+                      ),
+                    ),
                   ),
                 )
               ],
