@@ -8,6 +8,7 @@ import "package:newsapp/Features/RecomView/Presentation/Widgets/TextSpeech.dart"
 import "package:newsapp/Features/RecomView/Presentation/Widgets/categoriesListview.dart";
 
 import "../../../../Core/BackButton.dart";
+import "SearchField.dart";
 
 class RecomViewBody extends StatelessWidget {
   const RecomViewBody({super.key});
@@ -22,10 +23,12 @@ class RecomViewBody extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                const SizedBox(height: 5),
+                const SizedBox(height: 10),
                 const CustomBackButton(),
                 const SizedBox(height: 20),
                 const TextSpeech(),
+                const SizedBox(height: 20),
+                const SearchField(),
                 const SizedBox(height: 20),
                 const CategoriesBox(),
                 const SizedBox(height: 20),
