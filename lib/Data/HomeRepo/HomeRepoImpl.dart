@@ -13,9 +13,9 @@ class HomeRepoImpl implements HomeRepo {
   HomeRepoImpl(this.apiService);
 
   @override
-  Future<Either<Failure, NewsModel>> fetchCity(String cityName) async {
+  Future<Either<Failure, NewsModel>> fetchNews(String query) async {
     try {
-      Map<String, dynamic> data = await apiService.get(cityName);
+      Map<String, dynamic> data = await apiService.get(query);
 
       NewsModel newsModel = NewsModel(
         source: data["articles"][0]["source"],
