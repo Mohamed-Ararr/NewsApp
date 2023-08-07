@@ -5,7 +5,7 @@ import "package:newsapp/Core/AppColors.dart";
 import "package:newsapp/Features/HomeView/Presentation/Widget/RecomListview.dart";
 import "package:newsapp/Features/RecomView/Presentation/Widgets/CategoriesBox.dart";
 import "package:newsapp/Features/RecomView/Presentation/Widgets/TextSpeech.dart";
-import "package:newsapp/Features/RecomView/Presentation/Widgets/categoriesListview.dart";
+import 'package:newsapp/Features/RecomView/Presentation/Widgets/categories.dart';
 
 import "../../../../Core/BackButton.dart";
 import "SearchField.dart";

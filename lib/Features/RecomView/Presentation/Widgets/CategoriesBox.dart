@@ -1,6 +1,6 @@
 import "package:flutter/material.dart";
 
-import "categoriesListview.dart";
+import 'categories.dart';
 
 class CategoriesBox extends StatelessWidget {
   const CategoriesBox({super.key});
@@ -12,7 +12,7 @@ class CategoriesBox extends StatelessWidget {
       child: ListView.builder(
         itemCount: 10,
         scrollDirection: Axis.horizontal,
-        itemBuilder: (context, index) => CategoriesListview(index: index),
+        itemBuilder: (context, index) => Categories(index: index),
       ),
     );
   }
