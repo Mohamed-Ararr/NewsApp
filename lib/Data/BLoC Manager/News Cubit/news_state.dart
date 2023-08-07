@@ -17,4 +17,7 @@ class NewsSuccess extends NewsState {
   const NewsSuccess(this.newsModel);
 }
 
-class NewsFailure extends NewsState {}
+class NewsFailure extends NewsState {
+  final String errorMsg;
+  const NewsFailure(this.errorMsg);
+}
