@@ -13,22 +13,11 @@ class HomeRepoImpl implements HomeRepo {
   HomeRepoImpl(this.apiService);
 
   @override
-  Future<Either<Failure, NewsModel>> fetchNews(String query) async {
+  Future<Either<Failure, Map<String, dynamic>>> fetchNews(String query) async {
     try {
       Map<String, dynamic> data = await apiService.get(query);
 
-      NewsModel newsModel = NewsModel(
-        source: data["articles"][0]["source"],
-        author: data["articles"][0]["author"],
-        title: data["articles"][0]["title"],
-        description: data["articles"][0]["description"],
-        content: data["articles"][0]["content"],
-        publishedAt: data["articles"][0]["publishedAt"],
-        url: data["articles"][0]["url"],
-        urlToImage: data["articles"][0]["urlToImage"],
-      );
-
-      return Right(newsModel);
+      return Right(data);
     } catch (e) {
       debugPrint('Exception: $e');
       if (e is DioError) {

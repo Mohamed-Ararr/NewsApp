@@ -14,7 +14,8 @@ class NewsCubit extends Cubit<NewsState> {
 
   fetchNews(String query) async {
     emit(NewsLoading());
-    Either<Failure, NewsModel> news = await homeRepoImpl.fetchNews(query);
+    Either<Failure, Map<String, dynamic>> news =
+        await homeRepoImpl.fetchNews(query);
 
     news.fold(
       (failure) => emit(NewsFailure(failure.errorMsg)),

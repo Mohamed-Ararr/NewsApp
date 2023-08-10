@@ -13,8 +13,8 @@ class NewsInitial extends NewsState {}
 class NewsLoading extends NewsState {}
 
 class NewsSuccess extends NewsState {
-  final NewsModel newsModel;
-  const NewsSuccess(this.newsModel);
+  final Map<String, dynamic> news;
+  const NewsSuccess(this.news);
 }
 
 class NewsFailure extends NewsState {
