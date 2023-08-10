@@ -2,6 +2,7 @@ import "package:flutter/material.dart";
 import "package:flutter_bloc/flutter_bloc.dart";
 import "package:go_router/go_router.dart";
 import "package:newsapp/Data/BLoC%20Manager/News%20Cubit/news_cubit.dart";
+import "package:newsapp/Features/HomeView/Presentation/Widget/ImageModel.dart";
 
 import "../../../../Core/AppRouter.dart";
 import "CarouselListview.dart";
@@ -16,8 +17,8 @@ class News extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocBuilder<NewsCubit, NewsState>(
       builder: (context, state) {
-        debugPrint(state.toString());
         if (state is NewsSuccess) {
+          List breakingNewsList = state.news["articles"];
           return Column(
             children: [
               const SizedBox(height: 5),
@@ -27,7 +28,13 @@ class News extends StatelessWidget {
                 title: "Breaking news",
                 onPressed: () {},
               ),
-              const CarouselListview(),
+              CarouselListview(
+                items: List.generate(
+                  breakingNewsList.length,
+                  (index) => ImageModel(
+                      imageUrl: breakingNewsList[index]["urlToImage"]),
+                ),
+              ),
               const SizedBox(height: 15),
               SectionTitleButton(
                 title: "Recommendation",

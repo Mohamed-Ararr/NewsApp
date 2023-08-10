@@ -4,15 +4,19 @@ import "../../../../Constants.dart";
 import "../../../../Core/AppColors.dart";
 
 class ImageModel extends StatelessWidget {
-  const ImageModel({super.key});
+  const ImageModel({super.key, required this.imageUrl});
+
+  final String? imageUrl;
+  final String empty =
+      "https://www.generationsforpeace.org/wp-content/uploads/2018/03/empty.jpg";
 
   @override
   Widget build(BuildContext context) {
     return Center(
       child: Stack(
         children: [
-          Image.asset(
-            "assets/image.png",
+          Image.network(
+            imageUrl ?? empty,
           ),
           Container(
             padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 4),

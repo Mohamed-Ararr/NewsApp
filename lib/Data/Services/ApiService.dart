@@ -10,7 +10,6 @@ class ApiService {
 
   Future<Map<String, dynamic>> get(String? query) async {
     var response = await dio.get("$_baseUrl?q=$query&apiKey=$_apiKey");
-    debugPrint("${response.data}");
     return response.data;
   }
 }

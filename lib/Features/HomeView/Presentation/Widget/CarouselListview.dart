@@ -3,18 +3,16 @@ import "package:carousel_slider/carousel_slider.dart";
 import "package:flutter/material.dart";
 import "package:newsapp/Features/HomeView/Presentation/Widget/ImageModel.dart";
 
-import "../../../../Constants.dart";
-import "../../../../Core/AppColors.dart";
-
 class CarouselListview extends StatelessWidget {
-  const CarouselListview({super.key});
+  const CarouselListview({super.key, this.imageUrl, required this.items});
+
+  final String? imageUrl;
+  final List<Widget> items;
 
   @override
   Widget build(BuildContext context) {
     return CarouselSlider(
-      items: const [
-        ImageModel(),
-      ],
+      items: items,
       options: CarouselOptions(
         aspectRatio: 2,
         initialPage: 0,
