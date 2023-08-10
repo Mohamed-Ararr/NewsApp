@@ -16,8 +16,8 @@ class News extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocBuilder<NewsCubit, NewsState>(
       builder: (context, state) {
+        debugPrint(state.toString());
         if (state is NewsSuccess) {
-          debugPrint("${state.news}");
           return Column(
             children: [
               const SizedBox(height: 5),

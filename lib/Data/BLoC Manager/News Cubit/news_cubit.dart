@@ -19,7 +19,7 @@ class NewsCubit extends Cubit<NewsState> {
 
     news.fold(
       (failure) => emit(NewsFailure(failure.errorMsg)),
-      (success) => NewsSuccess(success),
+      (success) => emit(NewsSuccess(success)),
     );
   }
 }

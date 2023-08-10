@@ -9,7 +9,7 @@ import "Core/serviceLocator.dart";
 void main() => {
       setupServiceLocator(),
       Bloc.observer = NewsObserver(),
-      SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]),
+      // SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]),
       runApp(
         const NewsApp(),
       ),
