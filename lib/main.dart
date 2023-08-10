@@ -1,7 +1,10 @@
 import "package:flutter/material.dart";
 import "package:newsapp/Core/AppRouter.dart";
 
+import "Core/serviceLocator.dart";
+
 void main() => {
+      setupServiceLocator(),
       runApp(
         const NewsApp(),
       ),
