@@ -1,3 +1,4 @@
+import "package:cached_network_image/cached_network_image.dart";
 import "package:flutter/material.dart";
 
 import "../../../../Constants.dart";
@@ -15,8 +16,9 @@ class ImageModel extends StatelessWidget {
     return Center(
       child: Stack(
         children: [
-          Image.network(
-            imageUrl ?? empty,
+          CachedNetworkImage(
+            imageUrl: imageUrl ?? empty,
+            placeholder: (context, url) => const CircularProgressIndicator(),
           ),
           Container(
             padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 4),

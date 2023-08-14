@@ -51,3 +51,33 @@ class ServerFailure extends Failure {
     }
   }
 }
+
+// factory ServerFailure.fromDioError(DioError dioError) {
+//     switch (dioError.type) {
+//       case DioErrorType.connectionTimeout:
+//         return ServerFailure("Connection timeout with API server!");
+
+//       case DioErrorType.sendTimeout:
+//         return ServerFailure("Send timeout with API server!");
+
+//       case DioErrorType.receiveTimeout:
+//         return ServerFailure("Receive timeout with API server!");
+
+//       case DioErrorType.badCertificate:
+//         return ServerFailure("Bad certificate with API server!");
+
+//       case DioErrorType.badResponse:
+//         return ServerFailure("Bad response with API server!");
+
+//       case DioErrorType.cancel:
+//         return ServerFailure("Request to API server canceled");
+
+//       case DioErrorType.connectionError:
+//         return ServerFailure("Connection error with API server");
+
+//       case DioErrorType.unknown:
+//         return ServerFailure("No Internet Connection!");
+//       default:
+//         return ServerFailure("Ops an error occured, Please try again");
+//     }
+//   }

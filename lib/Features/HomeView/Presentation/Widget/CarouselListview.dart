@@ -1,7 +1,5 @@
-import "package:carousel_slider/carousel_options.dart";
 import "package:carousel_slider/carousel_slider.dart";
 import "package:flutter/material.dart";
-import "package:newsapp/Features/HomeView/Presentation/Widget/ImageModel.dart";
 
 class CarouselListview extends StatelessWidget {
   const CarouselListview({super.key, this.imageUrl, required this.items});

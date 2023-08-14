@@ -20,8 +20,9 @@ class HomeRepoImpl implements HomeRepo {
       return Right(data);
     } catch (e) {
       debugPrint('Exception: $e');
-      if (e is DioError) {
-        return Left(ServerFailure.fromDioError(e));
+      if (e is DioException) {
+        return Left(ServerFailure("Error"));
+        // return Left(ServerFailure.fromDioError(e));
       } else {
         return Left(ServerFailure(e.toString()));
       }
