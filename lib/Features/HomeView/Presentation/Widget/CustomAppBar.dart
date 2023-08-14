@@ -1,4 +1,5 @@
 import "package:flutter/material.dart";
+import "package:font_awesome_flutter/font_awesome_flutter.dart";
 import "package:newsapp/Core/AppFonts.dart";
 
 import "../../../../Core/AppColors.dart";
@@ -19,15 +20,15 @@ class CustomAppBar extends StatelessWidget {
           onTap: () {},
           borderRadius: BorderRadius.circular(7),
           child: Container(
-            padding: const EdgeInsets.all(6),
+            padding: const EdgeInsets.all(8),
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(12),
               color: AppColors.greyColor,
             ),
             child: Icon(
-              Icons.search_rounded,
+              FontAwesomeIcons.magnifyingGlass,
               color: AppColors.blackColor,
-              size: 30,
+              size: 22,
             ),
           ),
         ),

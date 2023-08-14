@@ -19,6 +19,7 @@ class ImageModel extends StatelessWidget {
           CachedNetworkImage(
             imageUrl: imageUrl ?? empty,
             placeholder: (context, url) => const CircularProgressIndicator(),
+            errorWidget: (context, url, error) => Text(error),
           ),
           Container(
             padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 4),
