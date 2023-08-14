@@ -16,10 +16,13 @@ class ImageModel extends StatelessWidget {
     return Center(
       child: Stack(
         children: [
-          CachedNetworkImage(
-            imageUrl: imageUrl ?? empty,
-            placeholder: (context, url) => const CircularProgressIndicator(),
-            errorWidget: (context, url, error) => Text(error),
+          ClipRRect(
+            borderRadius: kBorderRad10,
+            child: CachedNetworkImage(
+              imageUrl: imageUrl ?? empty,
+              placeholder: (context, url) => const CircularProgressIndicator(),
+              errorWidget: (context, url, error) => Text(error),
+            ),
           ),
           Container(
             padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 4),
